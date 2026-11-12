@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delta Films | Fotografía y Video en Puerto Rico</title>
+<meta name="description" content="Delta Films — Ariel Quiroz Rivera, fotógrafo y videógrafo en Puerto Rico. Bodas, eventos, fitness, deportes y real estate. Your vision, our mission.">
+<link rel="icon" href="assets/img/logo.png">
+<meta name="theme-color" content="#070707">
+<!-- Vista previa al compartir (WhatsApp, Instagram, Facebook, X). Si se cambia de dominio, actualizar estas URLs. -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_PR">
+<meta property="og:site_name" content="Delta Films">
+<meta property="og:title" content="Delta Films | Fotografía y Video en Puerto Rico">
+<meta property="og:description" content="Tu visión, nuestra misión. Bodas, eventos, fitness, deportes y real estate por Ariel Quiroz Rivera.">
+<meta property="og:url" content="https://nicolasbeharr.github.io/deltafilms/">
+<meta property="og:image" content="https://nicolasbeharr.github.io/deltafilms/assets/img/og-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Delta Films: Tu visión. Nuestra misión. Fotografía y video en Puerto Rico">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Delta Films | Fotografía y Video en Puerto Rico">
+<meta name="twitter:description" content="Tu visión, nuestra misión. Bodas, eventos, fitness, deportes y real estate.">
+<meta name="twitter:image" content="https://nicolasbeharr.github.io/deltafilms/assets/img/og-preview.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700;800;900&family=Poppins:wght@300;400;500;600&family=Antic+Didone&display=swap" rel="stylesheet">
+<style>
+:root{
+  --orange:#DD5805; --orange-hi:#FF6A0D; --peach:#FFD1B5;
+  --bg:#070707; --bg2:#0f0f0f; --card:#141414; --line:#262626;
+  --text:#fff; --muted:#a8a8a8;
+  --display:'League Spartan',system-ui,sans-serif;
+  --body:'Poppins',system-ui,sans-serif;
+  --serif:'Antic Didone',Georgia,serif;
+  --max:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-weight:300;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(var(--max),100% - 40px);margin-inline:auto}
+.eyebrow{font-family:var(--body);font-weight:500;font-size:.78rem;letter-spacing:.35em;text-transform:uppercase;color:var(--peach)}
+.h-display{font-family:var(--display);font-weight:800;line-height:1;letter-spacing:-.02em;text-transform:uppercase;padding-top:.08em}
+.eyebrow{display:block}
+.eyebrow + h2,.eyebrow + h3,.rule + h2{margin-top:18px}
+.accent{color:var(--orange)}
+.serif{font-family:var(--serif);font-style:normal}
+
+/* ---------- header ---------- */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,backdrop-filter .3s,border-color .3s;border-bottom:1px solid transparent}
+header.scrolled{background:rgba(7,7,7,.82);backdrop-filter:blur(14px);border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:42px;width:auto}
+.brand span{font-family:var(--display);font-weight:700;letter-spacing:.28em;font-size:.9rem}
+.links{display:flex;gap:6px;align-items:center}
+.links a{font-family:var(--display);font-weight:700;font-size:.86rem;letter-spacing:.12em;text-transform:uppercase;padding:14px 18px;border-radius:999px;color:#ddd;transition:color .2s,background .2s}
+.links a:hover{color:#fff;background:rgba(255,255,255,.06)}
+.links a.cta{background:var(--orange);color:#fff;margin-left:8px}
+.links a.cta:hover{background:var(--orange-hi)}
+.links a.ig{display:grid;place-items:center;flex:none;width:42px;height:42px;padding:0;border-radius:50%;border:1px solid var(--line);margin-left:6px;transition:border-color .2s,background .2s}
+.links a.ig:hover{border-color:var(--orange)}
+.ig svg{width:18px;height:18px;display:block}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger i{display:block;width:24px;height:2px;background:#fff;margin:5px auto;transition:transform .3s,opacity .3s}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:120px 0 80px;overflow:hidden;isolation:isolate}
+.glow{position:absolute;border-radius:50%;filter:blur(90px);z-index:-1;opacity:.75}
+.glow.g1{width:620px;height:620px;background:var(--orange);right:-180px;top:-120px;opacity:.55}
+.glow.g2{width:460px;height:460px;background:#ff8a3d;left:-200px;bottom:-160px;opacity:.38}
+.grain{position:absolute;inset:0;z-index:-1;opacity:.08;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(3.4rem,9vw,8.6rem);margin:22px 0 26px}
+.hero h1 .line{display:block}
+.hero h1 .accent{text-shadow:0 0 50px rgba(221,88,5,.45)}
+.rule{display:flex;align-items:center;gap:16px;line-height:1.7}
+.rule::after{content:"";height:1px;flex:1;background:linear-gradient(90deg,var(--orange),transparent)}
+.hero p.lead{font-size:1.08rem;color:#d6d6d6;max-width:520px}
+.hero p.lead em{font-family:var(--serif);font-style:normal;font-size:1.25em;color:var(--peach)}
+.btns{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.88rem;padding:17px 26px;border-radius:999px;transition:transform .2s,background .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px)}
+/* League Spartan en mayúsculas se sienta alto: bajamos solo el texto para centrarlo ópticamente */
+.btn,.links a{line-height:1}
+.links a:not(.ig){display:inline-flex;align-items:center;justify-content:center;height:44px;padding-top:0;padding-bottom:0}
+.btn .t,.links a .t{position:relative;top:.11em}
+.btn.primary{background:var(--orange);color:#fff;box-shadow:0 10px 40px -10px rgba(221,88,5,.7)}
+.btn.primary:hover{background:var(--orange-hi)}
+.btn.ghost{border:1px solid #3a3a3a}
+.btn.ghost:hover{border-color:var(--orange)}
+.btn svg{width:18px;height:18px}
+
+.stack{position:relative;height:600px}
+.stack figure{position:absolute;width:56%;aspect-ratio:2/3;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.12);box-shadow:0 30px 80px -20px rgba(0,0,0,.9);transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.stack figure img{width:100%;height:100%;object-fit:cover}
+.stack .f1{left:0;top:60px;transform:rotate(-7deg);z-index:1}
+.stack .f2{left:24%;top:0;transform:rotate(2deg);z-index:3}
+.stack .f3{right:0;top:110px;transform:rotate(9deg);z-index:2}
+.stack:hover .f1{transform:rotate(-10deg) translateX(-14px)}
+.stack:hover .f3{transform:rotate(12deg) translateX(14px)}
+.stack .slash{position:absolute;z-index:4;left:-6%;bottom:-10px;width:70%;pointer-events:none}
+.scroll-cue{position:absolute;left:50%;bottom:28px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;font-size:.68rem;letter-spacing:.3em;color:var(--muted);text-transform:uppercase}
+.scroll-cue span{width:1px;height:42px;background:linear-gradient(var(--orange),transparent);animation:cue 2s infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ---------- marquee ---------- */
+.marquee{border-block:1px solid var(--line);background:var(--bg2);overflow:hidden;padding:22px 0}
+.marquee-track{display:flex;width:max-content;animation:slide 38s linear infinite}
+.marquee-track span{font-family:var(--display);font-weight:800;font-size:clamp(1.4rem,3vw,2.2rem);text-transform:uppercase;letter-spacing:.02em;padding:0 28px;display:flex;align-items:center;gap:56px;white-space:nowrap}
+.marquee-track span::after{content:"";width:16px;height:16px;background:var(--orange);clip-path:polygon(50% 0,100% 100%,0 100%)}
+.marquee-track span:nth-child(even){-webkit-text-stroke:1px #5a5a5a;color:transparent}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+section{padding:120px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:60px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(2.6rem,6vw,5rem)}
+.sec-head p{max-width:420px;color:var(--muted)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.about-photo{position:relative}
+.about-photo img{border-radius:22px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.about-photo::before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--orange);border-radius:22px;z-index:-1}
+.about-photo .badge{position:absolute;right:-24px;bottom:40px;background:var(--orange);padding:18px 22px 16px;border-radius:16px;font-family:var(--display);font-weight:800;text-transform:uppercase;line-height:1;font-size:1.1rem;box-shadow:0 20px 50px -15px rgba(0,0,0,.8)}
+.about-photo .badge small{display:block;font-family:var(--body);font-weight:400;text-transform:none;font-size:.78rem;margin-top:6px;opacity:.9}
+.about h2{font-size:clamp(2.4rem,5vw,4.2rem);margin:18px 0 26px}
+.about p{color:#cfcfcf;margin-bottom:18px;max-width:560px}
+.about blockquote{font-family:var(--serif);font-size:clamp(1.4rem,2.4vw,1.9rem);line-height:1.3;color:var(--peach);border-left:2px solid var(--orange);padding-left:22px;margin:30px 0}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:34px}
+.pillar{border:1px solid var(--line);border-radius:16px;padding:18px}
+.pillar b{display:block;font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px}
+.pillar span{font-size:.85rem;color:var(--muted)}
+
+/* services */
+.services{background:var(--bg2);position:relative;overflow:hidden}
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:26px;overflow:hidden;background:var(--card);margin-bottom:28px}
+.svc:nth-child(even) .svc-img{order:2}
+.svc-img{position:relative;min-height:420px}
+.svc-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s}
+.svc:hover .svc-img img{transform:scale(1.05)}
+.svc-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.55))}
+.svc-img .num{position:absolute;left:24px;bottom:18px;z-index:2;font-family:var(--display);font-weight:900;font-size:5rem;line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(255,255,255,.75)}
+.svc-body{padding:48px 46px;display:flex;flex-direction:column;border-left:4px solid var(--orange)}
+.svc:nth-child(even) .svc-body{border-left:0;border-right:4px solid var(--orange)}
+.svc-body h3{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:clamp(2rem,3.4vw,2.8rem);line-height:1.05;margin:16px 0 26px}
+.pkg{padding:20px 0;border-top:1px solid var(--line)}
+.pkg-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px}
+.pkg h4{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.04em;font-size:1.05rem}
+.price{font-family:var(--display);font-weight:800;color:var(--orange);font-size:1.9rem;white-space:nowrap;line-height:1}
+.price small{font-size:.55em;font-weight:700;letter-spacing:.06em;margin-right:4px}
+.pkg ul{list-style:none;margin-top:10px}
+.pkg li{position:relative;padding-left:20px;color:#cfcfcf;font-size:.93rem;margin-bottom:5px}
+.pkg li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;background:var(--orange);clip-path:polygon(50% 0,100% 100%,0 100%)}
+.svc-body .btn{margin-top:auto;align-self:flex-start;margin-top:26px}
+
+.conditions{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;margin-top:70px;padding:44px;border:1px dashed #3a3a3a;border-radius:26px}
+.conditions h3{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:2rem;line-height:1.1}
+.conditions ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px 30px}
+.conditions li{color:#cfcfcf;font-size:.92rem;padding-left:22px;position:relative}
+.conditions li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:1.5px;background:var(--orange)}
+
+/* portfolio */
+.masonry{columns:4 260px;column-gap:16px}
+.shot{break-inside:avoid;margin-bottom:16px;position:relative;border-radius:18px;overflow:hidden;cursor:zoom-in;background:#111}
+.shot img{width:100%;transition:transform .8s,filter .5s;filter:saturate(.95)}
+.shot:hover img{transform:scale(1.05);filter:saturate(1.1)}
+.shot figcaption{position:absolute;inset:auto 0 0;padding:40px 18px 16px;background:linear-gradient(transparent,rgba(0,0,0,.85));font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;transform:translateY(100%);transition:transform .4s}
+.shot figcaption small{display:block;font-family:var(--body);font-weight:400;letter-spacing:.1em;color:var(--peach);font-size:.68rem;margin-bottom:2px}
+.shot:hover figcaption,.shot:focus-visible figcaption{transform:none}
+@media (hover:none){
+  .shot{background:none;border-radius:0;overflow:visible}
+  .shot img{border-radius:14px}
+  .shot figcaption{position:static;transform:none;background:none;padding:8px 2px 4px}
+}
+.port-cta{display:flex;justify-content:center;margin-top:40px}
+
+/* mission */
+.mv{position:relative;overflow:hidden}
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.mv-card{position:relative;border-radius:26px;padding:50px 44px;min-height:360px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;isolation:isolate}
+.mv-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:grayscale(1) brightness(.35)}
+.mv-card::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(160deg,rgba(221,88,5,.0) 30%,rgba(221,88,5,.55))}
+.mv-card h3{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(2.6rem,5vw,4rem);line-height:1.05;margin:14px 0 18px}
+.mv-card p{color:#ececec;max-width:520px}
+
+/* contact */
+.contact{text-align:center;position:relative;overflow:hidden;isolation:isolate}
+.contact .glow.g3{width:700px;height:700px;background:var(--orange);left:50%;top:60%;transform:translate(-50%,-50%);opacity:.35}
+.contact h2{font-size:clamp(3rem,10vw,8rem);margin:20px 0}
+.contact p.lead{color:#d6d6d6;max-width:560px;margin:0 auto}
+.contact .btns{justify-content:center}
+.c-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:70px;text-align:left}
+.c-card{display:flex;align-items:center;gap:16px;padding:22px;border:1px solid var(--line);border-radius:20px;background:rgba(20,20,20,.7);backdrop-filter:blur(6px);transition:border-color .2s,transform .2s}
+.c-card:hover{border-color:var(--orange);transform:translateY(-3px)}
+.c-card .ico{flex:none;width:50px;height:50px;border-radius:14px;background:var(--orange);display:grid;place-items:center}
+.c-card .ico svg{width:22px;height:22px}
+.c-card small{display:block;color:var(--muted);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+.c-card b{font-weight:500;font-size:1rem;word-break:break-word}
+
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:.82rem}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer .brand img{height:32px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;padding:30px}
+.lb.open{display:flex}
+.lb img{max-height:calc(100vh - 150px);max-height:calc(100svh - 150px);max-width:min(1000px,calc(100vw - 150px));border-radius:12px;object-fit:contain}
+.lb-cap{position:absolute;bottom:24px;left:0;right:0;text-align:center;font-family:var(--display);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.85rem}
+.lb button{position:absolute;background:rgba(255,255,255,.08);border:1px solid #333;color:#fff;width:52px;height:52px;border-radius:50%;cursor:pointer;display:grid;place-items:center}
+.lb button:hover{border-color:var(--orange)}
+.lb button svg{width:20px;height:20px}
+.lb .x{top:22px;right:22px}.lb .prev{left:22px;top:50%;transform:translateY(-50%)}.lb .next{right:22px;top:50%;transform:translateY(-50%)}
+@media (max-width:600px){.lb{padding:0}.lb img{max-width:100vw;border-radius:0}.lb .prev,.lb .next{top:auto;bottom:16px;transform:none}.lb .prev{left:16px}.lb .next{right:16px}.lb .x{top:16px;right:16px}.lb-cap{bottom:32px;padding:0 84px}}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.marquee-track{animation:none}*{transition:none!important}}
+
+/* responsive */
+@media (max-width:1000px){
+  .hero-grid,.about-grid,.svc,.conditions,.mv-grid{grid-template-columns:1fr}
+  .stack{height:480px;max-width:520px;margin:0 auto;width:100%}
+  .svc:nth-child(even) .svc-img{order:0}
+  .svc-body,.svc:nth-child(even) .svc-body{border:0;border-top:4px solid var(--orange)}
+  .svc-img{min-height:300px}
+  .about-photo{max-width:480px}
+  .c-cards{grid-template-columns:1fr}
+}
+@media (max-width:860px){
+  .burger{display:block}
+  .links{position:fixed;top:78px;left:0;right:0;flex-direction:column;align-items:stretch;padding:20px 20px 28px;background:#070707;border-bottom:1px solid var(--line);box-shadow:0 30px 60px rgba(0,0,0,.6);transform:translateY(-12px);opacity:0;visibility:hidden;transition:transform .3s,opacity .3s,visibility .3s;gap:4px;z-index:60}
+  .links.open{transform:none;opacity:1;visibility:visible}
+  header.menu-open{background:#070707;backdrop-filter:none;border-color:var(--line)}
+  .links a{padding:14px 16px}
+  .links a:not(.ig):not(.cta){justify-content:flex-start;height:48px}
+  .links a.cta{height:52px}
+  .links a.cta{margin:8px 0 0;text-align:center}
+  .links a.ig{margin:8px 0 4px 16px}
+  header.menu-open .burger i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  header.menu-open .burger i:nth-child(2){opacity:0}
+  header.menu-open .burger i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+@media (max-width:600px){
+  .wrap{width:calc(100% - 32px)}
+  section{padding:84px 0}
+  .stack{height:380px}
+  .svc-body{padding:32px 24px}
+  .conditions{padding:28px 22px}
+  .conditions ul{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr}
+  .about-photo .badge{right:12px}
+  .about-photo::before{inset:10px -8px -10px 10px}
+  .masonry{columns:2;column-gap:10px}
+  .shot{margin-bottom:10px;border-radius:12px}
+  .shot figcaption{font-size:.7rem;padding:30px 10px 10px}
+  .mv-card{padding:36px 26px;min-height:300px}
+  .brand span{display:none}
+  .price{font-size:1.5rem}
+  .shot img{border-radius:12px}
+}
+@media (max-width:380px){
+  .c-card{padding:18px 16px;gap:12px}
+  .c-card .ico{width:44px;height:44px}
+  .c-card b{font-size:.86rem;word-break:normal;overflow-wrap:normal;white-space:nowrap}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header id="top">
+  <div class="wrap nav">
+    <a href="#inicio" class="brand" aria-label="Delta Films, inicio">
+      <img src="assets/img/logo.png" alt="Logo Delta Films">
+      <span>DELTA FILMS</span>
+    </a>
+    <button class="burger" aria-label="Abrir menú" aria-expanded="false"><i></i><i></i><i></i></button>
+    <nav class="links" aria-label="Principal">
+      <a href="#nosotros"><span class="t">Nosotros</span></a>
+      <a href="#servicios"><span class="t">Servicios</span></a>
+      <a href="#portafolio"><span class="t">Portafolio</span></a>
+      <a href="#contacto"><span class="t">Contacto</span></a>
+      <a class="ig" href="https://www.instagram.com/delt_afilms" target="_blank" rel="noopener" aria-label="Instagram de Delta Films">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="#fff" stroke="none"/></svg>
+      </a>
+      <a class="cta" href="#contacto"><span class="t">Reserva</span></a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="glow g1"></div><div class="glow g2"></div><div class="grain"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="rule eyebrow rv">Delta Films · Fotografía &amp; Video · Puerto Rico</div>
+      <h1 class="h-display rv">
+        <span class="line">Tu visión.</span>
+        <span class="line accent">Nuestra</span>
+        <span class="line accent">misión.</span>
+      </h1>
+      <p class="lead rv">Capturamos emociones, historias y momentos irrepetibles, y los convertimos en <em>piezas visuales</em> llenas de significado. Bodas, eventos, fitness, deportes y propiedades.</p>
+      <div class="btns rv">
+        <a class="btn primary" href="#portafolio"><span class="t">Ver portafolio</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn ghost" href="https://wa.me/19392239494?text=Hola%20Delta%20Films%2C%20quiero%20cotizar%20un%20servicio" target="_blank" rel="noopener"><span class="t">Cotizar por WhatsApp</span></a>
+      </div>
+    </div>
+    <div class="stack rv" aria-hidden="true">
+      <figure class="f1"><img src="assets/img/nandcweddingday.jpg" alt=""></figure>
+      <figure class="f2"><img src="assets/img/arciasession.jpg" alt=""></figure>
+      <figure class="f3"><img src="assets/img/carlyaniscriollos2026weightlifting.jpg" alt=""></figure>
+      <svg class="slash" viewBox="0 0 400 120" fill="none">
+        <line x1="10" y1="110" x2="330" y2="14" stroke="#fff" stroke-width="2" stroke-dasharray="3 6"/>
+        <path d="M352 4 L376 44 L328 44 Z" stroke="#fff" stroke-width="2"/>
+      </svg>
+    </div>
+  </div>
+  <div class="scroll-cue">Scroll<span></span></div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Bodas</span><span>Eventos</span><span>Fitness</span><span>Halterofilia</span><span>Real Estate</span><span>Drone</span><span>Sesiones</span><span>Reels &amp; TikTok</span>
+    <span>Bodas</span><span>Eventos</span><span>Fitness</span><span>Halterofilia</span><span>Real Estate</span><span>Drone</span><span>Sesiones</span><span>Reels &amp; TikTok</span>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="nosotros">
+  <div class="wrap about-grid">
+    <div class="about-photo rv">
+      <img src="assets/img/0609.jpg" alt="Retrato en silueta, sesión de Delta Films" loading="lazy">
+      <div class="badge">Ariel Quiroz Rivera<small>Fotógrafo &amp; Videógrafo</small></div>
+    </div>
+    <div class="rv">
+      <div class="rule eyebrow">Creamos para tu visión</div>
+      <h2 class="h-display">Momentos que <span class="accent">perduran</span> en el tiempo.</h2>
+      <p>Delta Films es el estudio de fotografía y video de Ariel Quiroz Rivera. Cada proyecto se trabaja con sensibilidad artística, creatividad y excelencia profesional: desde una sesión individual hasta la cobertura completa de tu boda o evento.</p>
+      <p>Nuestro compromiso es crear contenido auténtico, creativo y profesional que conecte con las personas y preserve recuerdos que duren para siempre.</p>
+      <blockquote>“Fotografía y video para tus momentos, tu marca y tus proyectos.”</blockquote>
+      <div class="pillars">
+        <div class="pillar"><b>Auténtico</b><span>Historias reales, sin poses vacías.</span></div>
+        <div class="pillar"><b>Creativo</b><span>Dirección y edición con identidad.</span></div>
+        <div class="pillar"><b>Profesional</b><span>Entrega digital, a tiempo.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="servicios">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow">Servicios &amp; precios</div>
+        <h2 class="h-display">Nuestros <span class="accent">servicios.</span></h2>
+      </div>
+      <p>Paquetes claros para cada tipo de proyecto. ¿Necesitas algo distinto? Cuéntanos tu idea y armamos una cotización a tu medida.</p>
+    </div>
+
+    <article class="svc rv">
+      <div class="svc-img"><img src="assets/img/svc-camara.jpg" alt="Cámara Sony en mano" loading="lazy"><span class="num">01</span></div>
+      <div class="svc-body">
+        <div class="eyebrow">Your vision, our mission</div>
+        <h3>Fotografía <span class="accent">&amp;</span> Video</h3>
+        <div class="pkg">
+          <div class="pkg-top"><h4>Photography only</h4><div class="price"><small>DESDE</small>$80</div></div>
+          <ul><li>Sesiones individuales, de parejas, graduaciones y familias.</li><li>En exteriores o localización acordada; no incluye estudio.</li><li>Selección y edición de fotografías con entrega digital.</li><li>Duración y cantidad de fotos finales acordadas previamente.</li></ul>
+        </div>
+        <div class="pkg">
+          <div class="pkg-top"><h4>Video only</h4><div class="price"><small>DESDE</small>$120</div></div>
+          <ul><li>Grabación y edición de un video.</li><li>Colorización, música y entrega digital del video final.</li><li>Tiempo de cobertura y entregables acordados según el proyecto.</li></ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="svc rv">
+      <div class="svc-img"><img src="assets/img/stierfitness.jpg" alt="Sesión fitness en blanco y negro" loading="lazy"><span class="num">02</span></div>
+      <div class="svc-body">
+        <div class="eyebrow">Your vision, our mission</div>
+        <h3>Fitness <span class="accent">&amp;</span> Deportes</h3>
+        <div class="pkg">
+          <div class="pkg-top"><h4>Gymblogger session</h4><div class="price"><small>DESDE</small>$125</div></div>
+          <ul><li>Hasta 2 horas de grabación para gymbloggers, atletas y creadores fitness.</li><li>Contenido vertical para Instagram Reels y TikTok.</li><li>Edición de videos previamente acordados y entrega digital.</li></ul>
+        </div>
+        <div class="pkg">
+          <div class="pkg-top"><h4>Deportes / Halterofilia</h4><div class="price"><small>DESDE</small>$150</div></div>
+          <ul><li>Cobertura fotográfica y de video para eventos deportivos.</li><li>Precio según duración, necesidades y tipo de cobertura.</li></ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="svc rv">
+      <div class="svc-img"><img src="assets/img/svc-eventos.jpg" alt="Concierto con luces y público" loading="lazy"><span class="num">03</span></div>
+      <div class="svc-body">
+        <div class="eyebrow">Your vision, our mission</div>
+        <h3>Propiedades <span class="accent">&amp;</span> Eventos</h3>
+        <div class="pkg">
+          <div class="pkg-top"><h4>Real estate</h4><div class="price"><small>DESDE</small>$175</div></div>
+          <ul><li>Fotografía de la propiedad, video walkthrough y tomas aéreas con drone.</li><li>Edición y entrega digital del contenido.</li><li>Hasta 2 horas para una propiedad estándar.</li></ul>
+        </div>
+        <div class="pkg">
+          <div class="pkg-top"><h4>Eventos generales</h4><div class="price"><small>DESDE</small>$200</div></div>
+          <ul><li>Cobertura de fotografía y video.</li><li>Hasta 8 horas, según el paquete acordado.</li><li>Selección, edición y entrega digital del material final.</li></ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="svc rv">
+      <div class="svc-img"><img src="assets/img/nandcweddingday.jpg" alt="Pareja de novios el día de su boda" loading="lazy"><span class="num">04</span></div>
+      <div class="svc-body">
+        <div class="eyebrow">Tu historia. Nuestra visión.</div>
+        <h3>Bodas</h3>
+        <div class="pkg">
+          <div class="pkg-top"><h4>Paquete personalizado</h4><div class="price" style="font-size:1.3rem">A tu medida</div></div>
+          <ul><li>Paquetes de fotografía, video o ambos, según las necesidades de la pareja.</li><li>El precio final se determina mediante consulta con la pareja.</li></ul>
+        </div>
+        <a class="btn primary" href="https://wa.me/19392239494?text=Hola%20Delta%20Films%2C%20quiero%20informaci%C3%B3n%20de%20paquetes%20de%20boda" target="_blank" rel="noopener"><span class="t">Agenda tu consulta</span></a>
+      </div>
+    </article>
+
+    <div class="conditions rv">
+      <div>
+        <div class="eyebrow">Antes de reservar</div>
+        <h3 style="margin-top:12px">Condiciones <span class="accent">generales</span></h3>
+      </div>
+      <ul>
+        <li>Los precios pueden variar según localización, duración y complejidad del proyecto.</li>
+        <li>La cantidad de fotografías finales y videos editados se acuerda antes del servicio.</li>
+        <li>El tiempo adicional y los entregables extra pueden generar cargos adicionales.</li>
+        <li>Las tomas con drone dependen del clima, la seguridad y las autorizaciones aplicables.</li>
+        <li>Entrega digital del contenido final.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO ============ -->
+<section id="portafolio">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow">Proyectos seleccionados</div>
+        <h2 class="h-display">Porta<span class="accent">folio.</span></h2>
+      </div>
+      <p>Bodas, sesiones, eventos y deporte en Puerto Rico. Toca cualquier foto para verla en grande.</p>
+    </div>
+    <div class="masonry" id="gallery">
+      <figure class="shot rv" tabindex="0"><img src="assets/img/arciasession.jpg" alt="Retrato a contraluz naranja" loading="lazy"><figcaption><small>Sesión</small>Arcia Session</figcaption></figure>
+      <figure class="shot rv" tabindex="0"><img src="assets/img/corsacupserie.jpg" alt="Buggies en pista" loading="lazy"><figcaption><small>Deportes</small>Go Kart Buggies</figcaption></figure>
+      <figure class="shot rv" tabindex="0"><img src="assets/img/nandcweddingday.jpg" alt="Novios besándose" loading="lazy"><figcaption><small>Boda</small>N &amp; C Wedding Day</figcaption></figure>
+      <figure class="shot rv" tabindex="0"><img src="assets/img/carlyaniscriollos2026weightlifting.jpg" alt="Atleta de halterofilia con medalla" loading="lazy"><figcaption><small>Halterofilia</small>Carlyanis · Criollos 2026</figcaption></figure>
+      <figure class="shot rv" tabindex="0"><img src="assets/img/haciendaangelina.jpg" alt="Terraza iluminada de noche" loading="lazy"><figcaption><small>Lugar</small>Hacienda Angelina</figcaption></figure>
+      <figure class="shot rv" tabindex="0"><img src="assets/img/babyrevealandproposal.jpg" alt="Pareja abrazada con sonograma" loading="lazy"><figcaption><small>Sesión</small>El inicio de un para siempre</figcaption></figure>
+      <figure class="shot rv" tabindex="0"><img src="assets/img/stierfitness.jpg" alt="Atleta fitness en blanco y negro" loading="lazy"><figcaption><small>Fitness</small>Stier Fitness</figcaption></figure>
+      <figure class="shot rv" tabindex="0"><img src="assets/img/haciendaangelinapirateskidsbrunch.jpg" alt="Cantante disfrazado de pirata" loading="lazy"><figcaption><small>Evento</small>Hacienda Angelina Pirates Brunch</figcaption></figure>
+      <figure class="shot rv" tabindex="0"><img src="assets/img/doggieweenpawtyhyatthouse.jpg" alt="Evento al aire libre con mascotas" loading="lazy"><figcaption><small>Evento</small>Doggieween Pawty · Hyatt House</figcaption></figure>
+      <figure class="shot rv" tabindex="0"><img src="assets/img/sande20sanniversary.jpg" alt="Pareja celebrando aniversario" loading="lazy"><figcaption><small>Sesión</small>S &amp; E 20's Anniversary</figcaption></figure>
+      <figure class="shot rv" tabindex="0"><img src="assets/img/arcia0609.jpg" alt="Retrato urbano en auto" loading="lazy"><figcaption><small>Sesión</small>Arcia 06/09</figcaption></figure>
+      <figure class="shot rv" tabindex="0"><img src="assets/img/witzairylaureano15s.jpg" alt="Quinceañera en vestido entre árboles" loading="lazy"><figcaption><small>Quinceañero</small>Witzairy Laureano 15's</figcaption></figure>
+      <figure class="shot rv" tabindex="0"><img src="assets/img/festivaldelafuerza.jpg" alt="Banner del Festival de la Fuerza en Gurabo" loading="lazy"><figcaption><small>Halterofilia</small>Festival de la Fuerza</figcaption></figure>
+      <figure class="shot rv" tabindex="0"><img src="assets/img/anzel1sbirthday.jpg" alt="Niño en su primer cumpleaños" loading="lazy"><figcaption><small>Cumpleaños</small>Anzel 1's Birthday</figcaption></figure>
+      <figure class="shot rv" tabindex="0"><img src="assets/img/0609.jpg" alt="Silueta de perfil" loading="lazy"><figcaption><small>Sesión</small>06/09</figcaption></figure>
+      <figure class="shot rv" tabindex="0"><img src="assets/img/quinceanerodeivianeilyzcasillas.jpg" alt="Quinceañera sobre un Jeep" loading="lazy"><figcaption><small>Quinceañero</small>Quinceañero de Ivianeilyz Casillas</figcaption></figure>    </div>
+    <div class="port-cta rv">
+      <a class="btn ghost" href="https://deltafilms.pixieset.com/" target="_blank" rel="noopener"><span class="t">Ver galerías completas</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MISSION / VISION ============ -->
+<section class="mv" style="padding-top:20px">
+  <div class="wrap mv-grid">
+    <div class="mv-card rv">
+      <img src="assets/img/svc-foto.jpg" alt="" loading="lazy">
+      <div class="eyebrow">Lo que hacemos</div>
+      <h3>Misión</h3>
+      <p>Capturar emociones, historias y momentos irrepetibles a través de la fotografía y el video, transformándolos en piezas visuales llenas de significado.</p>
+    </div>
+    <div class="mv-card rv">
+      <img src="assets/img/svc-bodas.jpg" alt="" loading="lazy">
+      <div class="eyebrow">Hacia dónde vamos</div>
+      <h3>Visión</h3>
+      <p>Ser una marca reconocida por convertir momentos en historias visuales impactantes, inspirando a otros a ver el mundo a través de imágenes que transmiten emoción y verdad.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contacto">
+  <div class="glow g3"></div>
+  <div class="wrap">
+    <div class="eyebrow rv">Escríbenos para cotizar y reservar</div>
+    <h2 class="h-display rv">Cuéntanos<br><span class="accent">tu idea.</span></h2>
+    <p class="lead rv">Dinos qué tienes en mente —fecha, lugar y tipo de proyecto— y te respondemos con una propuesta.</p>
+    <div class="btns rv">
+      <a class="btn primary" href="https://wa.me/19392239494?text=Hola%20Delta%20Films%2C%20quiero%20cotizar%20un%20servicio" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20l1.3-3.9A8 8 0 1 1 8 19z"/></svg><span class="t">Escríbenos por WhatsApp</span></a>
+    </div>
+    <div class="c-cards">
+      <a class="c-card rv" href="tel:+19392239494">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span>
+        <span><small>Teléfono</small><b>(939) 223-9494</b></span></a>
+      <a class="c-card rv" href="https://www.instagram.com/delt_afilms" target="_blank" rel="noopener">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1" fill="#fff" stroke="none"/></svg></span>
+        <span><small>Instagram</small><b>@delt_afilms</b></span></a>
+      <a class="c-card rv" href="mailto:arieldelta80@gmail.com">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+        <span><small>Email</small><b>arieldelta80@gmail.com</b></span></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <a href="#inicio" class="brand"><img src="assets/img/logo.png" alt="Delta Films"><span>DELTA FILMS</span></a>
+    <span>Your vision, our mission · Puerto Rico</span>
+    <span>© <span id="yr">2026</span> Delta Films. Todos los derechos reservados.</span>
+  </div>
+</footer>
+
+<!-- lightbox -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+  <button class="x" aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="prev" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <img alt="">
+  <button class="next" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+  <div class="lb-cap"></div>
+</div>
+
+<script>
+// header + menu
+const hdr=document.querySelector('header'),burger=document.querySelector('.burger'),links=document.querySelector('.links');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>30),{passive:true});
+burger.addEventListener('click',()=>{const o=links.classList.toggle('open');hdr.classList.toggle('menu-open',o);burger.setAttribute('aria-expanded',o)});
+links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');hdr.classList.remove('menu-open')}));
+document.getElementById('yr').textContent=new Date().getFullYear();
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+// lightbox
+const shots=[...document.querySelectorAll('#gallery .shot')],lb=document.getElementById('lb'),lbImg=lb.querySelector('img'),lbCap=lb.querySelector('.lb-cap');let cur=0;
+function show(i){cur=(i+shots.length)%shots.length;const im=shots[cur].querySelector('img');lbImg.src=im.src;lbImg.alt=im.alt;lbCap.textContent=shots[cur].querySelector('figcaption').lastChild.textContent.trim();lb.classList.add('open');document.body.style.overflow='hidden'}
+function close(){lb.classList.remove('open');document.body.style.overflow=''}
+shots.forEach((s,i)=>{s.addEventListener('click',()=>show(i));s.addEventListener('keydown',e=>{if(e.key==='Enter')show(i)})});
+lb.querySelector('.x').onclick=close;lb.querySelector('.prev').onclick=()=>show(cur-1);lb.querySelector('.next').onclick=()=>show(cur+1);
+lb.addEventListener('click',e=>{if(e.target===lb)close()});
+addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+</script>
+</body>
+</html>
