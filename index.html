@@ -178,6 +178,39 @@ section{padding:120px 0}
 }
 .port-cta{display:flex;justify-content:center;margin-top:40px}
 
+/* video reels */
+.reels{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.reel{position:relative;aspect-ratio:9/16;border-radius:20px;overflow:hidden;background:#111;cursor:pointer;isolation:isolate;border:1px solid var(--line);transition:border-color .3s,transform .4s cubic-bezier(.2,.8,.2,1)}
+.reel:hover,.reel:focus-visible{border-color:var(--orange);transform:translateY(-4px)}
+.reel:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.reel video,.reel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.reel::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.35) 0,transparent 22%,transparent 55%,rgba(0,0,0,.88))}
+.reel .dur{position:absolute;top:14px;right:14px;font-family:var(--display);font-weight:700;font-size:.72rem;letter-spacing:.08em;padding:5px 9px;border-radius:999px;background:rgba(0,0,0,.55);backdrop-filter:blur(4px)}
+.reel .play{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:var(--orange);display:grid;place-items:center;box-shadow:0 10px 30px rgba(221,88,5,.45);transform:scale(.9);opacity:.92;transition:transform .3s,opacity .3s}
+.reel .play svg{width:22px;height:22px;margin-left:4px}
+.reel:hover .play{transform:scale(1);opacity:1}
+.reel .meta{position:absolute;left:0;right:0;bottom:0;padding:18px}
+.reel .meta small{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--peach);margin-bottom:4px}
+.reel .meta b{display:block;font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.03em;font-size:1.05rem;line-height:1.15}
+.vlb{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;padding:30px}
+.vlb.open{display:flex}
+.vlb video{max-height:calc(100vh - 60px);max-height:calc(100svh - 60px);max-width:100%;aspect-ratio:9/16;border-radius:14px;background:#000}
+.vlb .x{position:absolute;top:22px;right:22px;background:rgba(255,255,255,.08);border:1px solid #333;color:#fff;width:52px;height:52px;border-radius:50%;cursor:pointer;display:grid;place-items:center;z-index:2}
+.vlb .x:hover{border-color:var(--orange)}
+.vlb .x svg{width:20px;height:20px}
+@media (max-width:1000px){.reels{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){
+  .reels{gap:10px}
+  .reel{border-radius:14px}
+  .reel .play{width:48px;height:48px;margin:-24px 0 0 -24px}
+  .reel .play svg{width:16px;height:16px;margin-left:3px}
+  .reel .meta{padding:12px}
+  .reel .meta b{font-size:.82rem}
+  .reel .meta small{font-size:.58rem;letter-spacing:.14em}
+  .reel .dur{top:10px;right:10px;font-size:.64rem}
+  .vlb{padding:0}.vlb video{max-height:100svh;border-radius:0}.vlb .x{top:16px;right:16px}
+}
+
 /* mission */
 .mv{position:relative;overflow:hidden}
 .mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
@@ -284,6 +317,7 @@ footer .brand img{height:32px}
       <a href="#nosotros"><span class="t">Nosotros</span></a>
       <a href="#servicios"><span class="t">Servicios</span></a>
       <a href="#portafolio"><span class="t">Portafolio</span></a>
+      <a href="#video"><span class="t">Video</span></a>
       <a href="#contacto"><span class="t">Contacto</span></a>
       <a class="ig" href="https://www.instagram.com/delt_afilms" target="_blank" rel="noopener" aria-label="Instagram de Delta Films">
         <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1" fill="#fff" stroke="none"/></svg>
@@ -476,6 +510,41 @@ footer .brand img{height:32px}
   </div>
 </section>
 
+<!-- ============ VIDEO ============ -->
+<section id="video" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="eyebrow">Reels &amp; contenido</div>
+        <h2 class="h-display">En <span class="accent">movimiento.</span></h2>
+      </div>
+      <p>Videos editados para Instagram Reels y TikTok: deporte, fitness y marcas. Toca cualquiera para verlo con sonido.</p>
+    </div>
+    <div class="reels" id="reels">
+      <div class="reel rv" tabindex="0" role="button" data-src="assets/video/halterofilia.mp4" aria-label="Ver video: Festival de la Fuerza">
+        <video muted loop playsinline preload="none" poster="assets/video/halterofilia.jpg" data-loop="assets/video/halterofilia-loop.mp4"></video>
+        <span class="dur">0:23</span><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4l14 8-14 8z"/></svg></span>
+        <div class="meta"><small>Halterofilia</small><b>Festival de la Fuerza</b></div>
+      </div>
+      <div class="reel rv" tabindex="0" role="button" data-src="assets/video/carlyanis.mp4" aria-label="Ver video: Carlyanis, Respeto x Respeto">
+        <video muted loop playsinline preload="none" poster="assets/video/carlyanis.jpg" data-loop="assets/video/carlyanis-loop.mp4"></video>
+        <span class="dur">0:25</span><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4l14 8-14 8z"/></svg></span>
+        <div class="meta"><small>Halterofilia</small><b>Carlyanis · Respeto x Respeto</b></div>
+      </div>
+      <div class="reel rv" tabindex="0" role="button" data-src="assets/video/stier.mp4" aria-label="Ver video: Stier Fitness">
+        <video muted loop playsinline preload="none" poster="assets/video/stier.jpg" data-loop="assets/video/stier-loop.mp4"></video>
+        <span class="dur">0:23</span><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4l14 8-14 8z"/></svg></span>
+        <div class="meta"><small>Fitness</small><b>Stier Fitness</b></div>
+      </div>
+      <div class="reel rv" tabindex="0" role="button" data-src="assets/video/promo.mp4" aria-label="Ver video: Contenido para redes">
+        <video muted loop playsinline preload="none" poster="assets/video/promo.jpg" data-loop="assets/video/promo-loop.mp4"></video>
+        <span class="dur">1:11</span><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4l14 8-14 8z"/></svg></span>
+        <div class="meta"><small>Promo</small><b>Contenido para redes</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============ MISSION / VISION ============ -->
 <section class="mv" style="padding-top:20px">
   <div class="wrap mv-grid">
@@ -512,9 +581,9 @@ footer .brand img{height:32px}
       <a class="c-card rv" href="https://www.instagram.com/delt_afilms" target="_blank" rel="noopener">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1" fill="#fff" stroke="none"/></svg></span>
         <span><small>Instagram</small><b>@delt_afilms</b></span></a>
-      <a class="c-card rv" href="mailto:arieldelta80@gmail.com">
+      <a class="c-card rv" href="mailto:deltafilms0288@gmail.com">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
-        <span><small>Email</small><b>arieldelta80@gmail.com</b></span></a>
+        <span><small>Email</small><b>deltafilms0288@gmail.com</b></span></a>
     </div>
   </div>
 </section>
@@ -535,6 +604,10 @@ footer .brand img{height:32px}
   <button class="next" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
   <div class="lb-cap"></div>
 </div>
+<div class="vlb" id="vlb" role="dialog" aria-modal="true" aria-label="Video">
+  <button class="x" aria-label="Cerrar"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <video controls playsinline preload="none"></video>
+</div>
 
 <script>
 // header + menu
@@ -553,6 +626,16 @@ function close(){lb.classList.remove('open');document.body.style.overflow=''}
 shots.forEach((s,i)=>{s.addEventListener('click',()=>show(i));s.addEventListener('keydown',e=>{if(e.key==='Enter')show(i)})});
 lb.querySelector('.x').onclick=close;lb.querySelector('.prev').onclick=()=>show(cur-1);lb.querySelector('.next').onclick=()=>show(cur+1);
 lb.addEventListener('click',e=>{if(e.target===lb)close()});
+// video reels: muted loop previews play only while visible
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){if(!v.src)v.src=v.dataset.loop;v.play().catch(()=>{})}else v.pause()}),{threshold:.35});
+const vlb=document.getElementById('vlb'),vlbV=vlb.querySelector('video');
+function vClose(){vlbV.pause();vlbV.removeAttribute('src');vlbV.load();vlb.classList.remove('open');document.body.style.overflow=''}
+document.querySelectorAll('.reel').forEach(r=>{const v=r.querySelector('video');if(!reduce)vio.observe(v);
+  const open=()=>{vlbV.src=r.dataset.src;vlb.classList.add('open');document.body.style.overflow='hidden';vlbV.play().catch(()=>{})};
+  r.addEventListener('click',open);r.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open()}})});
+vlb.querySelector('.x').onclick=vClose;vlb.addEventListener('click',e=>{if(e.target===vlb)vClose()});
+addEventListener('keydown',e=>{if(e.key==='Escape'&&vlb.classList.contains('open'))vClose()});
 addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
 </script>
 </body>
