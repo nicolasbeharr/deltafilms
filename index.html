@@ -186,9 +186,11 @@ section{padding:120px 0}
 .reel video,.reel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
 .reel::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.35) 0,transparent 22%,transparent 55%,rgba(0,0,0,.88))}
 .reel .dur{position:absolute;top:14px;right:14px;font-family:var(--display);font-weight:700;font-size:.72rem;letter-spacing:.08em;padding:5px 9px;border-radius:999px;background:rgba(0,0,0,.55);backdrop-filter:blur(4px)}
-.reel .play{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:var(--orange);display:grid;place-items:center;box-shadow:0 10px 30px rgba(221,88,5,.45);transform:scale(.9);opacity:.92;transition:transform .3s,opacity .3s}
+.reel .dur{display:flex;align-items:center;gap:6px}
+.reel .dur svg{width:9px;height:9px;fill:var(--orange)}
+.reel .play{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:var(--orange);display:grid;place-items:center;box-shadow:0 10px 30px rgba(221,88,5,.45);transform:scale(.7);opacity:0;transition:transform .3s,opacity .3s;pointer-events:none}
 .reel .play svg{width:22px;height:22px;margin-left:4px}
-.reel:hover .play{transform:scale(1);opacity:1}
+@media (hover:hover){.reel:hover .play,.reel:focus-visible .play{transform:scale(1);opacity:1}}
 .reel .meta{position:absolute;left:0;right:0;bottom:0;padding:18px}
 .reel .meta small{display:block;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--peach);margin-bottom:4px}
 .reel .meta b{display:block;font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.03em;font-size:1.05rem;line-height:1.15}
@@ -202,8 +204,6 @@ section{padding:120px 0}
 @media (max-width:600px){
   .reels{gap:10px}
   .reel{border-radius:14px}
-  .reel .play{width:48px;height:48px;margin:-24px 0 0 -24px}
-  .reel .play svg{width:16px;height:16px;margin-left:3px}
   .reel .meta{padding:12px}
   .reel .meta b{font-size:.82rem}
   .reel .meta small{font-size:.58rem;letter-spacing:.14em}
@@ -523,22 +523,22 @@ footer .brand img{height:32px}
     <div class="reels" id="reels">
       <div class="reel rv" tabindex="0" role="button" data-src="assets/video/halterofilia.mp4" aria-label="Ver video: Festival de la Fuerza">
         <video muted loop playsinline preload="none" poster="assets/video/halterofilia.jpg" data-loop="assets/video/halterofilia-loop.mp4"></video>
-        <span class="dur">0:23</span><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4l14 8-14 8z"/></svg></span>
+        <span class="dur"><svg viewBox="0 0 24 24"><path d="M5 3l16 9-16 9z"/></svg>0:23</span><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4l14 8-14 8z"/></svg></span>
         <div class="meta"><small>Halterofilia</small><b>Festival de la Fuerza</b></div>
       </div>
       <div class="reel rv" tabindex="0" role="button" data-src="assets/video/carlyanis.mp4" aria-label="Ver video: Carlyanis, Respeto x Respeto">
         <video muted loop playsinline preload="none" poster="assets/video/carlyanis.jpg" data-loop="assets/video/carlyanis-loop.mp4"></video>
-        <span class="dur">0:25</span><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4l14 8-14 8z"/></svg></span>
+        <span class="dur"><svg viewBox="0 0 24 24"><path d="M5 3l16 9-16 9z"/></svg>0:25</span><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4l14 8-14 8z"/></svg></span>
         <div class="meta"><small>Halterofilia</small><b>Carlyanis · Respeto x Respeto</b></div>
       </div>
       <div class="reel rv" tabindex="0" role="button" data-src="assets/video/stier.mp4" aria-label="Ver video: Stier Fitness">
         <video muted loop playsinline preload="none" poster="assets/video/stier.jpg" data-loop="assets/video/stier-loop.mp4"></video>
-        <span class="dur">0:23</span><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4l14 8-14 8z"/></svg></span>
+        <span class="dur"><svg viewBox="0 0 24 24"><path d="M5 3l16 9-16 9z"/></svg>0:23</span><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4l14 8-14 8z"/></svg></span>
         <div class="meta"><small>Fitness</small><b>Stier Fitness</b></div>
       </div>
       <div class="reel rv" tabindex="0" role="button" data-src="assets/video/promo.mp4" aria-label="Ver video: Contenido para redes">
         <video muted loop playsinline preload="none" poster="assets/video/promo.jpg" data-loop="assets/video/promo-loop.mp4"></video>
-        <span class="dur">1:11</span><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4l14 8-14 8z"/></svg></span>
+        <span class="dur"><svg viewBox="0 0 24 24"><path d="M5 3l16 9-16 9z"/></svg>1:11</span><span class="play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M6 4l14 8-14 8z"/></svg></span>
         <div class="meta"><small>Promo</small><b>Contenido para redes</b></div>
       </div>
     </div>
