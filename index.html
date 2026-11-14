@@ -165,8 +165,9 @@ section{padding:120px 0}
 .pay{grid-column:1/-1;display:flex;align-items:center;gap:18px 28px;flex-wrap:wrap;padding-top:28px;border-top:1px solid var(--line)}
 .pay h4{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:1.05rem;margin-right:auto}
 .conditions .pay-list{display:flex;flex-wrap:wrap;gap:10px;list-style:none}
-.conditions .pay-list li{padding:9px 16px;border:1px solid #3a3a3a;border-radius:999px;font-family:var(--display);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;color:#fff;background:#111}
+.conditions .pay-list li{padding:10.5px 16px 7.5px;border:1px solid #3a3a3a;border-radius:999px;font-family:var(--display);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;color:#fff;background:#111}
 .conditions .pay-list li::before{display:none}
+@media (max-width:600px){.conditions .pay-list{display:grid;grid-template-columns:1fr 1fr;width:100%}.conditions .pay-list li{text-align:center}}
 .pay-note{margin-top:18px;color:var(--muted);font-size:.85rem}
 .pay-note b{color:var(--peach);font-weight:500}
 
@@ -194,7 +195,8 @@ section{padding:120px 0}
 .reel::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(0,0,0,.35) 0,transparent 22%,transparent 55%,rgba(0,0,0,.88))}
 .reel .dur{position:absolute;top:14px;right:14px;font-family:var(--display);font-weight:700;font-size:.72rem;letter-spacing:.08em;padding:5px 9px;border-radius:999px;background:rgba(0,0,0,.55);backdrop-filter:blur(4px)}
 .reel .dur{display:flex;align-items:center;gap:6px}
-.reel .dur svg{width:9px;height:9px;fill:var(--orange)}
+.reel .dur{padding:6.5px 9px 3.5px}
+.reel .dur svg{width:9px;height:9px;fill:var(--orange);transform:translateY(-1.5px)}
 .reel .play{position:absolute;left:50%;top:50%;width:64px;height:64px;margin:-32px 0 0 -32px;border-radius:50%;background:var(--orange);display:grid;place-items:center;box-shadow:0 10px 30px rgba(221,88,5,.45);transform:scale(.7);opacity:0;transition:transform .3s,opacity .3s;pointer-events:none}
 .reel .play svg{width:22px;height:22px;margin-left:4px}
 @media (hover:hover){.reel:hover .play,.reel:focus-visible .play{transform:scale(1);opacity:1}}
