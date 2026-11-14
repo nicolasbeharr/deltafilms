@@ -162,6 +162,13 @@ section{padding:120px 0}
 .conditions ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:14px 30px}
 .conditions li{color:#cfcfcf;font-size:.92rem;padding-left:22px;position:relative}
 .conditions li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:1.5px;background:var(--orange)}
+.pay{grid-column:1/-1;display:flex;align-items:center;gap:18px 28px;flex-wrap:wrap;padding-top:28px;border-top:1px solid var(--line)}
+.pay h4{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.04em;font-size:1.05rem;margin-right:auto}
+.conditions .pay-list{display:flex;flex-wrap:wrap;gap:10px;list-style:none}
+.conditions .pay-list li{padding:9px 16px;border:1px solid #3a3a3a;border-radius:999px;font-family:var(--display);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;color:#fff;background:#111}
+.conditions .pay-list li::before{display:none}
+.pay-note{margin-top:18px;color:var(--muted);font-size:.85rem}
+.pay-note b{color:var(--peach);font-weight:500}
 
 /* portfolio */
 .masonry{columns:4 260px;column-gap:16px}
@@ -472,6 +479,12 @@ footer .brand img{height:32px}
         <li>Las tomas con drone dependen del clima, la seguridad y las autorizaciones aplicables.</li>
         <li>Entrega digital del contenido final.</li>
       </ul>
+      <div class="pay">
+        <h4>Métodos de <span class="accent">pago</span></h4>
+        <ul class="pay-list" aria-label="Métodos de pago aceptados">
+          <li>ATH Móvil</li><li>PayPal</li><li>Apple Cash</li><li>Efectivo</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -585,6 +598,7 @@ footer .brand img{height:32px}
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
         <span><small>Email</small><b>deltafilms0288@gmail.com</b></span></a>
     </div>
+    <p class="pay-note rv">Aceptamos <b>ATH Móvil</b>, <b>PayPal</b>, <b>Apple Cash</b> y <b>efectivo</b>.</p>
   </div>
 </section>
 
